@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MajTaj5\\source\\repos\\calculator\\calculator\\calculator.csproj",
+      "projectUniqueName": "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\calculator.csproj",
       "projectName": "calculator",
-      "projectPath": "C:\\Users\\MajTaj5\\source\\repos\\calculator\\calculator\\calculator.csproj",
+      "projectPath": "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\calculator.csproj",
       "packagesPath": "C:\\Users\\MajTaj5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MajTaj5\\source\\repos\\calculator\\calculator\\obj\\",
+      "outputPath": "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MajTaj5\\AppData\\Roaming\\NuGet\\NuGet.Config",
