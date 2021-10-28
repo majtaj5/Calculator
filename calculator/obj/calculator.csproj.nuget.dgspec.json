@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\calculator.csproj": {}
+    "D:\\Visual Studio Programy\\first-project-calculator\\calculator\\calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\calculator.csproj": {
+    "D:\\Visual Studio Programy\\first-project-calculator\\calculator\\calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\calculator.csproj",
+        "projectUniqueName": "D:\\Visual Studio Programy\\first-project-calculator\\calculator\\calculator.csproj",
         "projectName": "calculator",
-        "projectPath": "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\calculator.csproj",
-        "packagesPath": "C:\\Users\\MajTaj5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MajTaj5\\source\\repos\\first-project-calculator\\calculator\\obj\\",
+        "projectPath": "D:\\Visual Studio Programy\\first-project-calculator\\calculator\\calculator.csproj",
+        "packagesPath": "C:\\Users\\Łukasz\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Programy\\first-project-calculator\\calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MajTaj5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Łukasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
