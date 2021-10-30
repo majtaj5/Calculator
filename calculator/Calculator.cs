@@ -1,35 +1,76 @@
 ﻿namespace calculator
-
 {
-class Calculator
-{
+using System;
 
-    //public void Choice()
-    //    {
-    //        System.Console.WriteLine("Wybierz gre: 1. \n2. \n 3. \n 4. \n");
-    //    }
-    public static int Sum(params int [] numbers)
+
+    class Calculator
     {
-            int sum = 0;
-            for (int i = 0; i < numbers.Length; i++)
+        public Calculator()
+        {
+            Gra();
+            int number = int.Parse(Console.ReadLine());
+
+            if (Choice(number) == 1)
             {
-                sum += numbers[i];
+                Console.WriteLine(Sum()); 
             }
-            return sum;
-    }
+            else if (Choice(number) == 2)
+            {
+                Console.WriteLine(Subtraction());
+            }
+            else if (Choice(number) == 3)
+            {
+                Console.WriteLine(Division());
+            }
+            else if (Choice(number) == 4)
+            {
+                Console.WriteLine(Multiplication());
+            }
 
-    public static int Subtraction(int a, int b)
-    {
-        return a - b;
-    }
-    public static int Division(int a, int b)
-    {
-        return a / b;
-    }
-    public static int Multiplication(int a, int b)
-    {
-        return a * b;
-    }
+        }
+        public void Gra()
+        {
+            Console.WriteLine("Dzialanie do wykonania: ");
+        }
+        public int Choice(int choice)
+        {
+            return choice;
+        }
+
+        public int Sum()
+        {
+             Console.WriteLine("Podaj dwie liczby do sumy: ");
+             int number1, number2, sum = 0;
+             number1 = int.Parse(Console.ReadLine());
+             number2 = int.Parse(Console.ReadLine());
+             return number1 + number2;
+ 
+        }
+
+        public static int Subtraction()
+        {
+            Console.WriteLine("Podaj dwie liczby do roznicy: ");
+            int number1, number2, sum = 0;
+            number1 = int.Parse(Console.ReadLine());
+            number2 = int.Parse(Console.ReadLine());
+            return number1 - number2;
+        }
+        public static int Division()
+        {
+            Console.WriteLine("Podaj dwie liczby do dzielenia: ");
+            int number1, number2, sum = 0;
+            number1 = int.Parse(Console.ReadLine());
+            number2 = int.Parse(Console.ReadLine());
+            return number1 / number2;
+        }
+        public static int Multiplication()
+        {
+            Console.WriteLine("Podaj dwie liczby do mnozenia: ");
+            int number1, number2, sum = 0;
+            number1 = int.Parse(Console.ReadLine());
+            number2 = int.Parse(Console.ReadLine());
+            return number1 * number2;
+        }
 }
 }
 
