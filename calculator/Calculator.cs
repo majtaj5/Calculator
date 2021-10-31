@@ -3,7 +3,7 @@
 using System;
 
 
-    class Calculator
+    public class Calculator
     {
         public Calculator()
         {
@@ -28,45 +28,43 @@ using System;
             }
 
         }
-        public void Gra()
+        private void Gra()
         {
-            Console.WriteLine("Dzialanie do wykonania: ");
+            Console.WriteLine("What math operation to perform?\n1. Sum.\n2. Subtraction.\n3. Diviosion.\n4. Multiplication.");
         }
-        public int Choice(int choice)
+        private int Choice(int choice)
         {
             return choice;
         }
-
-        public int Sum()
+        private int Sum()
         {
-             Console.WriteLine("Podaj dwie liczby do sumy: ");
-             int number1, number2, sum = 0;
+             Console.WriteLine("Enter two numbers for the sum: ");
+             int number1, number2;
              number1 = int.Parse(Console.ReadLine());
              number2 = int.Parse(Console.ReadLine());
              return number1 + number2;
  
         }
-
-        public static int Subtraction()
+        private int Subtraction()
         {
-            Console.WriteLine("Podaj dwie liczby do roznicy: ");
-            int number1, number2, sum = 0;
+            Console.WriteLine("Enter two numbers for the subtract: ");
+            int number1, number2;
             number1 = int.Parse(Console.ReadLine());
             number2 = int.Parse(Console.ReadLine());
             return number1 - number2;
         }
-        public static int Division()
+        private double Division()
         {
-            Console.WriteLine("Podaj dwie liczby do dzielenia: ");
-            int number1, number2, sum = 0;
-            number1 = int.Parse(Console.ReadLine());
-            number2 = int.Parse(Console.ReadLine());
-            return number1 / number2;
+            Console.WriteLine("Enter two numbers to divide: ");
+            double number1, number2;
+            number1 = double.Parse(Console.ReadLine());
+            number2 = double.Parse(Console.ReadLine());  
+            return Math.Round(number1 / number2, 2);
         }
-        public static int Multiplication()
+        private int Multiplication()
         {
-            Console.WriteLine("Podaj dwie liczby do mnozenia: ");
-            int number1, number2, sum = 0;
+            Console.WriteLine("Enter two numbers to multiply: ");
+            int number1, number2;
             number1 = int.Parse(Console.ReadLine());
             number2 = int.Parse(Console.ReadLine());
             return number1 * number2;

@@ -9,7 +9,7 @@ namespace calculator
         static void Main(string[] args)
         {
 
-            Console.WriteLine("W co chcesz zagrac? \n1. \n2. \n3. \n4. \n ");
+            Console.WriteLine("W co chcesz zagrac? \n1. Kalkulator.\n2. \n3. \n4. \n ");
             int choice;
             choice = int.Parse(Console.ReadLine());
             if (choice == 1)
