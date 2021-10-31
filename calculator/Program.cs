@@ -9,25 +9,12 @@ namespace calculator
         static void Main(string[] args)
         {
 
-            Console.WriteLine("W co chcesz zagrac? \n1. Kalkulator.\n2. \n3. \n4. \n ");
-            int choice;
-            choice = int.Parse(Console.ReadLine());
-            if (choice == 1)
-            {
-                Calculator test = new Calculator();
-            }
-            else if (choice == 2)
-            {
-                Console.WriteLine("test2");
-            }
-            else if (choice == 3)
-            {
-                Console.WriteLine("test3");
-            }
-            else if (choice == 4)
-            {
-                Console.WriteLine("test4");
-            }
+            //SimpleAlgoritms algoritms = new SimpleAlgoritms();
+            //Calculator calc = new Calculator();
+
+            //string text = System.IO.File.ReadAllText(@"D:\Visual Studio Programy\first-project-calculator\Example.txt");
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine(text);
 
             Console.ReadKey();
             }

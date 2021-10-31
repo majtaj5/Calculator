@@ -1,0 +1,4 @@
+Przykladowy plik
+
+tekstowy do odczytu
+w C#

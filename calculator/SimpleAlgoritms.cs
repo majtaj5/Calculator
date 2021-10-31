@@ -3,26 +3,53 @@
     using System;
     public class SimpleAlgoritms
     {
-        static void LiczbyPierwsze(int liczbaProb)
+        public SimpleAlgoritms()
         {
-            int licznik = 0;
-            int liczba = 2;
-            //Console.WriteLine("Podaj liczbe prob: ");
-            //liczbaProb = int.Parse(Console.ReadLine());
-            while ((licznik = int.Parse(Console.ReadLine())) < liczbaProb)
+            //ctorialOfNumber();
+            //FactorialOfNumber();
+            PowerOfNumber();
+        }
+        private void PrimeNumber()
+        {
+            int number;
+            Console.Write("Number to chech: ");
+            number = int.Parse(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Green;
+            if (number % 2 == 1 || number % 3 == 1)
             {
-                liczba++;
-                if (liczba % 2 == 1)
-                {
-                    Console.WriteLine(liczba);
-                    licznik++;
-                }
-                else
-                    continue;
-
+                Console.WriteLine("It's prime number.");
             }
+            else
+            {
+                Console.WriteLine("It is not prime number.");
+            }
+            Console.ResetColor();
+        }
+        private void FactorialOfNumber()
+        {
+            int factorialNumber;
+            Console.Write("Factorial of the number to calculate: ");
+            factorialNumber = int.Parse(Console.ReadLine());
+            for (int i = factorialNumber - 1; i > 0; i--)
+            {
+                factorialNumber *= i;
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(factorialNumber);
+            Console.ResetColor();
+        }
+        private void PowerOfNumber()
+        {
+            int powerOfNumber;
+            Console.Write("The power of number to calculate: ");
+            powerOfNumber = int.Parse(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(powerOfNumber *= powerOfNumber);
+            Console.ResetColor();
         }
 
     }
 }
+
+
 
