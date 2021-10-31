@@ -7,7 +7,8 @@
         {
             //ctorialOfNumber();
             //FactorialOfNumber();
-            PowerOfNumber();
+            //PowerOfNumber();
+            AverageOfTheNumbers();
         }
         private void PrimeNumber()
         {
@@ -46,6 +47,24 @@
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(powerOfNumber *= powerOfNumber);
             Console.ResetColor();
+        }
+        private void AverageOfTheNumbers()
+        {
+            int[] numbers = new int[5];
+            int input;
+            Console.WriteLine("Insert 5 numbers:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                input = int.Parse(Console.ReadLine());
+                numbers[i] = input;
+            }
+            double sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum += numbers[i];
+            }
+            Console.WriteLine(sum);
+            Console.WriteLine($"Srednia podanych liczb: {sum / numbers.Length}");
         }
 
     }

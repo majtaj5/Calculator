@@ -9,7 +9,7 @@ namespace calculator
         static void Main(string[] args)
         {
 
-            //SimpleAlgoritms algoritms = new SimpleAlgoritms();
+            SimpleAlgoritms algoritms = new SimpleAlgoritms();
             //Calculator calc = new Calculator();
 
             //string text = System.IO.File.ReadAllText(@"D:\Visual Studio Programy\first-project-calculator\Example.txt");
