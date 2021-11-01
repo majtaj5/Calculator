@@ -26,8 +26,10 @@ namespace calculator
                     Console.WriteLine("dupa");
 
                     break;
-                case ("3"):
-                    Console.WriteLine("dupa");
+                case ("3"):  //power
+                   
+
+                    Console.WriteLine(Power.GetPower(2,8));
 
                     break;
 
