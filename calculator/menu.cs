@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace calculator
 {
-    class InputMainChoice
+    class menu
     {
 
 
-       
-        public static string GetMainChoice()
-            
-        { 
 
-            Console.ForegroundColor= ConsoleColor.DarkGreen;
+        public static void ShowOptions()
+
+        {
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("0-simple calculator\n" +
                 "1-factorial\n" +
@@ -26,12 +26,7 @@ namespace calculator
                 "6-working with the text files"
                 );
             Console.ResetColor();
-            string choice = Console.ReadLine();
-
-            
-
-            return choice;    
-          }
+        }
        
     }
 }
