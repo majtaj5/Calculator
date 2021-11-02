@@ -3,7 +3,7 @@
 {
 class Calculator
 {
-
+         
     //public void Choice()
     //    {
     //        System.Console.WriteLine("Wybierz gre: 1. \n2. \n 3. \n 4. \n");
@@ -18,15 +18,15 @@ class Calculator
             return sum;
     }
 
-    public static int Subtraction(int a, int b)
+    public static int Sub(int a, int b)
     {
         return a - b;
     }
-    public static int Division(int a, int b)
+    public static int Div(int a, int b)
     {
         return a / b;
     }
-    public static int Multiplication(int a, int b)
+    public static int Mul(int a, int b)
     {
         return a * b;
     }

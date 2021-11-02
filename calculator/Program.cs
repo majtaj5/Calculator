@@ -28,8 +28,8 @@ namespace calculator
                     break;
                 case ("3"):  //power
 
-                    Power power = new Power();
-                    Console.WriteLine(power.GetPower(2, 8));
+                    CalculatorAdvance calculatorAdvance1 = new CalculatorAdvance();
+                    Console.WriteLine(calculatorAdvance1.pow(2, 2));
 
                     break;
 
