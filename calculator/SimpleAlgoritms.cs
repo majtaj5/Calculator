@@ -3,68 +3,36 @@
     using System;
     public class SimpleAlgoritms
     {
-        public SimpleAlgoritms()
+        public void PrimeNumber()
         {
-            //ctorialOfNumber();
-            //FactorialOfNumber();
-            //PowerOfNumber();
-            AverageOfTheNumbers();
+
         }
-        private void PrimeNumber()
+        public int FactorialOfNumber(int number)
         {
-            int number;
-            Console.Write("Number to chech: ");
-            number = int.Parse(Console.ReadLine());
-            Console.ForegroundColor = ConsoleColor.Green;
-            if (number % 2 == 1 || number % 3 == 1)
+            int result = 1;
+            for (int i = 1; i <= number; i++)
             {
-                Console.WriteLine("It's prime number.");
+                result *= i;
             }
-            else
+            return result;
+        }
+        public int PowerOfNumber(int number, int power)
+        {
+            int result = 1;
+            for (int i = 0; i < power; i++)
             {
-                Console.WriteLine("It is not prime number.");
+                result *= number;
             }
-            Console.ResetColor();
+            return result;
         }
-        private void FactorialOfNumber()
+        public int AverageOfTheNumbers(int [] numbers)
         {
-            int factorialNumber;
-            Console.Write("Factorial of the number to calculate: ");
-            factorialNumber = int.Parse(Console.ReadLine());
-            for (int i = factorialNumber - 1; i > 0; i--)
-            {
-                factorialNumber *= i;
-            }
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(factorialNumber);
-            Console.ResetColor();
-        }
-        private void PowerOfNumber()
-        {
-            int powerOfNumber;
-            Console.Write("The power of number to calculate: ");
-            powerOfNumber = int.Parse(Console.ReadLine());
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(powerOfNumber *= powerOfNumber);
-            Console.ResetColor();
-        }
-        private void AverageOfTheNumbers()
-        {
-            int[] numbers = new int[5];
-            int input;
-            Console.WriteLine("Insert 5 numbers:");
+            int result = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
-                input = int.Parse(Console.ReadLine());
-                numbers[i] = input;
+                result += numbers[i];
             }
-            double sum = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                sum += numbers[i];
-            }
-            Console.WriteLine(sum);
-            Console.WriteLine($"Srednia podanych liczb: {sum / numbers.Length}");
+            return result / numbers.Length;
         }
 
     }
