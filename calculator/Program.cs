@@ -8,7 +8,7 @@ namespace calculator
         
         static void Main(string[] args)
         {
-            menu.ShowOptions();
+            Menu.ShowMenuOptions();
             string choice = (Console.ReadLine());
 
             switch (choice)
@@ -27,9 +27,9 @@ namespace calculator
 
                     break;
                 case ("3"):  //power
-                   
 
-                    Console.WriteLine(Power.GetPower(2,8));
+                    Power power = new Power();
+                    Console.WriteLine(power.GetPower(2, 8));
 
                     break;
 
