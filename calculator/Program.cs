@@ -15,8 +15,8 @@ namespace calculator
             {
 
                 case ("0"):
-                    Console.WriteLine("dupa");
 
+                    operations.GetCalculationType();
                     break;
                 case ("1"):
                     Console.WriteLine("dupa");
