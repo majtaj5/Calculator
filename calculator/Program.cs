@@ -7,11 +7,10 @@ namespace calculator
     {
         static void Main(string[] args)
         {
-
             AplicationMenus menu = new AplicationMenus();
             Calculator calc = new Calculator();
             SimpleAlgoritms alg = new SimpleAlgoritms();
-            MathOperationResult result = new MathOperationResult();
+            ShowResult result = new ShowResult();
             Console.WriteLine(menu.MathOperationsMenu());
             result.Result();
             Console.ResetColor();

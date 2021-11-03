@@ -3,9 +3,20 @@
     using System;
     public class SimpleAlgoritms
     {
-        public void PrimeNumber()
+        public bool PrimeNumber(int number)
         {
-
+            double range = number / 2;
+            if (number <= 1) return false;
+            if (number == 2 || number == 3) return true;
+            for (int i = 3; i < range; i++)
+            {
+                if (number % i == 0)
+                {  
+                    return false;
+                }
+                Console.WriteLine(number % i);
+            }
+            return true;
         }
         public int FactorialOfNumber(int number)
         {
