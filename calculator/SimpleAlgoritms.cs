@@ -45,6 +45,29 @@
             }
             return result / numbers.Length;
         }
+        public int[] MinMaxElementOfArray(int[] numbers)
+        {
+            int n = numbers.Length;
+            while (n > 1)
+            {
+                for (int i = 0; i < n - 1; i++)
+                {
+                    if (numbers[i] > numbers[i + 1])
+                    {
+                        int temp = numbers[i];
+                        numbers[i] = numbers[i + 1];
+                        numbers[i + 1] = temp;
+                    }
+                }
+                n--;
+            }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(numbers[i]);
+            }
+            return numbers;
+        }
 
     }
 }
