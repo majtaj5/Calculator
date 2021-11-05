@@ -1,36 +1,29 @@
 ﻿namespace calculator
-
 {
-class Calculator
-{
-         
-    //public void Choice()
-    //    {
-    //        System.Console.WriteLine("Wybierz gre: 1. \n2. \n 3. \n 4. \n");
-    //    }
-    public static int Sum(params int [] numbers)
-    {
-            int sum = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                sum += numbers[i];
-            }
-            return sum;
-    }
+    using System;
 
-    public static int Sub(int a, int b)
+
+    public partial class Calculator
     {
-        return a - b;
-    }
-    public static int Div(int a, int b)
-    {
-        return a / b;
-    }
-    public static int Mul(int a, int b)
-    {
-        return a * b;
+
+        public double Sum(double number1, double number2)
+        {
+            return number1 + number2;
+        }
+        public double Subtraction(double number1, double number2)
+        {
+            return number1 - number2;
+        }
+        public double Division(double number1, double number2)
+        {
+            return Math.Round(number1 / number2, 2);
+        }
+        public double Multiplication(double number1, double number2)
+        {
+            return number1 * number2;
+        }
     }
 }
-}
+
 
 
