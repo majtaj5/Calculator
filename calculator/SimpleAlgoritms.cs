@@ -48,6 +48,7 @@
         public int[] MinMaxElementOfArray(int[] numbers)
         {
             int n = numbers.Length;
+            int[] minMaxValues = new int[2];
             while (n > 1)
             {
                 for (int i = 0; i < n - 1; i++)
@@ -61,14 +62,10 @@
                 }
                 n--;
             }
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(numbers[i]);
-            }
-            return numbers;
+            Console.WriteLine(minMaxValues[0] = numbers[0]);
+            Console.WriteLine(minMaxValues[1] = numbers[numbers.Length - 1]);
+            return minMaxValues;
         }
-
     }
 }
 
