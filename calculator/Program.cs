@@ -1,5 +1,5 @@
 ﻿using System;
-
+using calculator.Enums;
 
 namespace calculator
 {
@@ -10,6 +10,7 @@ namespace calculator
         {
             Menu.ShowMenuOptions();
             string choice = (Console.ReadLine());
+            
 
             switch (choice)
             {
@@ -26,25 +27,7 @@ namespace calculator
                     Console.WriteLine("dupa");
 
                     break;
-                case ("3"):  //power
-
-                    CalculatorAdvance calculatorAdvance1 = new CalculatorAdvance();
-                    Console.WriteLine(calculatorAdvance1.pow(2, 2));
-
-                    break;
-
-                case ("4"):
-                    Console.WriteLine("dupa");
-
-                    break;
-                case ("5"):
-                    Console.WriteLine("dupa");
-
-                    break;
-                case ("6"):
-                    Console.WriteLine("dupa");
-
-                    break;
+                
 
 
             }
