@@ -1,12 +1,18 @@
 ﻿using System;
 
+
 namespace calculator
 {
-    class Program
+    partial class Program
     {
+        
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            InputMainChoice inputMainChoice1 = new InputMainChoice();
+            inputMainChoice1.GetMainChoice()
+
+            Console.ReadLine();
+   
         }
     }
 }
