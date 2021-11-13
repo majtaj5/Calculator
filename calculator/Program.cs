@@ -8,11 +8,7 @@ namespace calculator
         
         static void Main(string[] args)
         {
-            InputMainChoice inputMainChoice1 = new InputMainChoice();
-            inputMainChoice1.GetMainChoice()
-
             Console.ReadLine();
-   
         }
     }
 }
