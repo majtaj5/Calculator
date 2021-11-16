@@ -16,5 +16,9 @@ namespace calculator
         {
             return Math.Round(number1 / number2, 2);
         }
+        public double Multiplication(double number1, double number2)
+        {
+            return number1 * number2;
+        }
     }
 }
