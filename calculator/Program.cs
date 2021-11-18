@@ -7,7 +7,8 @@ namespace calculator
     {
         static void Main(string[] args)
         {
-            //Menu.ShowMenuOptions(); options class
+
+            MainMenuOutPut.ShowMenuOptions();
             string choice = Console.ReadLine();
             switch (choice)
             {
