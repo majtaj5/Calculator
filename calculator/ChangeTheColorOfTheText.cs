@@ -11,9 +11,7 @@ namespace calculator
         public static void PrintColorMessage(ConsoleColor color, string message)
         { 
             Console.ForegroundColor = color;
-
             Console.WriteLine(message);
-            //Console.ResetColor does not work .I don't know why .I created a method that resets color. Error CS0201  Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement calculator  
             resetConsole();
         }
 
@@ -23,6 +21,6 @@ namespace calculator
             Console.ForegroundColor = ConsoleColor.Gray;
         }
 
-        }
+    }
             
 }
