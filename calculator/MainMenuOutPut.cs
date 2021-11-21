@@ -10,13 +10,12 @@ namespace calculator
     {
         public static void ShowMenuOptions()
         {
-            string menuOptions= ("What would you like to do?\n"+
+            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkGreen, 
+                ("What would you like to do?\n" +
                 "0-simple calculator\n" +
                 "1-advenced calculator\n" +
-                "2-workinig withthe text files\n" 
-                );
-
-            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkGreen, menuOptions);
+                "2-workinig withthe text files\n"
+                ));
         }
     }
 }
