@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace calculator
 {
     public class WorkingWithFiles
     {
+        public string ReadTextFile(string textFilePath)
+        {
+            return File.ReadAllText(textFilePath);
+        }
     }
 }
