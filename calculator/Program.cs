@@ -7,14 +7,12 @@ namespace calculator
     {
         static void Main(string[] args)
         {
-
             MainMenuOutPut.ShowMenuOptions();
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case ("0"):
-                    //operations.GetCalculationType();
-                    Console.WriteLine("menu-Calculator");
+                    Calculator.Calculate();
                     break;
                 case ("1"):
                     Console.WriteLine("menu-SimpleAlgoritms");
