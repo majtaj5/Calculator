@@ -9,13 +9,14 @@ namespace calculator
     {
         public static void Calculate()
         {
-
-            string usreInPut = "4   -2";
+            Console.Clear();
+            Console.WriteLine("Napisz rowaznie");
+            string usreInPut = Console.ReadLine();
             string userInPutRemoveWhitespace = usreInPut.Replace(" ", "");
-
-            int posChar = userInPutRemoveWhitespace.IndexOf("-");
-            string number1 = " ";
-            string number2 = " ";
+            char[] chars = {'+', '-', '*', '/', '\\' };
+            int posChar = userInPutRemoveWhitespace.IndexOfAny(chars);
+            string number1 = "";
+            string number2 = "";
 
             for (int i = 0; i < posChar; i++)
             {
@@ -26,26 +27,42 @@ namespace calculator
             {
                 number2 = number2 + userInPutRemoveWhitespace[j];
             }
-            Console.WriteLine(number1);
 
+
+            Console.WriteLine(number1);
+            Console.WriteLine(number2);
+            double number1db = double.Parse(number1);
+            double number2db = double.Parse(number2);
+            Console.WriteLine(number1db);
+            Console.WriteLine(number2db);
 
             char operations = userInPutRemoveWhitespace[posChar];
-
+            double result = 0;
             Console.WriteLine(operations);
+            result = CalculatorOperations.Count(number1db, number2db, operations);
+            Console.WriteLine(result);
         }
 
+        
+        
+    }
 
-        //calculation methods
-        public static double Subtraction(double number1, double number2) => number1 - number2;
-        public static double Addition(double number1, double number2) => number1 + number2;
-        public static double Division(double number1, double number2) => Math.Round(number1 / number2, 2);
-        public static double Multiplication(double number1, double number2) => number1 * number2;
-       
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
       
-    }
+    
 }
