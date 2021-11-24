@@ -1,7 +1,5 @@
 using System;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading;
+
 
 namespace calculator
 {
@@ -9,15 +7,28 @@ namespace calculator
     {
         public static void Calculate()
         {
-            Console.Clear();
-            Console.WriteLine("Napisz rowaznie");
+            //write text and read user input
+            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkBlue,
+                "Type the equation you want to calculate.\n" +
+                "You can add, subtract, multiply, divide two numbers.\n" +
+                "\n" +
+                "For example:\n"+
+                "2+2\n"+
+                "2*2\n"
+                );
             string usreInPut = Console.ReadLine();
+
+            //removing spaces from a string
             string userInPutRemoveWhitespace = usreInPut.Replace(" ", "");
-            char[] chars = {'+', '-', '*', '/', '\\' };
-            int posChar = userInPutRemoveWhitespace.IndexOfAny(chars);
+
+            //getting index of a math symbol
+            char[] mathSymbols = {'+', '-', '*', '/', '\\' };
+            int posChar = userInPutRemoveWhitespace.IndexOfAny(mathSymbols);
+
             string number1 = "";
             string number2 = "";
 
+            //getting nembers from a string
             for (int i = 0; i < posChar; i++)
             {
                 number1 = number1 + userInPutRemoveWhitespace[i];
@@ -28,41 +39,17 @@ namespace calculator
                 number2 = number2 + userInPutRemoveWhitespace[j];
             }
 
-
-            Console.WriteLine(number1);
-            Console.WriteLine(number2);
+            //parsing numbers to double
             double number1db = double.Parse(number1);
             double number2db = double.Parse(number2);
-            Console.WriteLine(number1db);
-            Console.WriteLine(number2db);
 
+            //getting a math symbol
             char operations = userInPutRemoveWhitespace[posChar];
+
+            //printing out the result
             double result = 0;
-            Console.WriteLine(operations);
             result = CalculatorOperations.Count(number1db, number2db, operations);
-            Console.WriteLine(result);
+            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
         }
-
-        
-        
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    
+    } 
 }
