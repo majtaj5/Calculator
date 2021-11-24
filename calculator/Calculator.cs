@@ -3,7 +3,7 @@ using System;
 
 namespace calculator
 {
-    public class  Calculator
+    public class  Calculator :
     {
         public static void Calculate()
         {
@@ -38,7 +38,7 @@ namespace calculator
             {
                 number2 = number2 + userInPutRemoveWhitespace[j];
             }
-
+          
             //parsing numbers to double
             double number1db = double.Parse(number1);
             double number2db = double.Parse(number2);
@@ -50,6 +50,30 @@ namespace calculator
             double result = 0;
             result = CalculatorOperations.Count(number1db, number2db, operations);
             ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
+            
+
         }
-    } 
+        =
+        public static double Count(double number1db, double number2db, char operations)
+        {
+            double result = 0;
+
+            switch (operations)
+            {
+                case '+':
+                    result = Substraction();
+                    break;
+                case '-':
+                    result = number1db - number2db;
+                    break;
+                case '*':
+                    result = number1db * number2db;
+                    break;
+                case '/':
+                case '\\':
+                    result = number1db / number2db;
+                    break;
+            }
+            return result;
+        } 
 }

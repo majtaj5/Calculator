@@ -1,7 +1,7 @@
 ﻿
 namespace calculator
 {
-    class CalculatorOperations
+    class CalculatorOperations: BaseCalculator
     {
         public static double Count(double number1db, double number2db, char operations)
         {
@@ -10,7 +10,7 @@ namespace calculator
             switch (operations)
             {
                 case '+':
-                    result = number1db + number2db;
+                    result = Substraction();
                     break;
                 case '-':
                     result = number1db - number2db;
