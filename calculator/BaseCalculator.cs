@@ -8,11 +8,11 @@ namespace calculator
 {
     public class BaseCalculator
     {
-        public static double Subtraction(double number1, double number2)
+        protected static double Subtraction(double number1, double number2)
         {
             return number1 - number2;
         }
-        public int Addition(int number1, int number2)
+        public static double Addition(double number1, double number2)
         {
             return number1 + number2;
         }

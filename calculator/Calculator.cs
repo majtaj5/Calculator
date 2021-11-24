@@ -3,7 +3,7 @@ using System;
 
 namespace calculator
 {
-    public class  Calculator :
+    public class Calculator : BaseCalculator
     {
         public static void Calculate()
         {
@@ -12,8 +12,8 @@ namespace calculator
                 "Type the equation you want to calculate.\n" +
                 "You can add, subtract, multiply, divide two numbers.\n" +
                 "\n" +
-                "For example:\n"+
-                "2+2\n"+
+                "For example:\n" +
+                "2+2\n" +
                 "2*2\n"
                 );
             string usreInPut = Console.ReadLine();
@@ -22,7 +22,7 @@ namespace calculator
             string userInPutRemoveWhitespace = usreInPut.Replace(" ", "");
 
             //getting index of a math symbol
-            char[] mathSymbols = {'+', '-', '*', '/', '\\' };
+            char[] mathSymbols = { '+', '-', '*', '/', '\\' };
             int posChar = userInPutRemoveWhitespace.IndexOfAny(mathSymbols);
 
             string number1 = "";
@@ -38,7 +38,7 @@ namespace calculator
             {
                 number2 = number2 + userInPutRemoveWhitespace[j];
             }
-          
+
             //parsing numbers to double
             double number1db = double.Parse(number1);
             double number2db = double.Parse(number2);
@@ -48,20 +48,20 @@ namespace calculator
 
             //printing out the result
             double result = 0;
-            result = CalculatorOperations.Count(number1db, number2db, operations);
+            result = Count(number1db, number2db, operations);
             ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
-            
+
 
         }
-        =
-        public static double Count(double number1db, double number2db, char operations)
+
+        private static double Count(double number1db, double number2db, char operations)
         {
             double result = 0;
 
             switch (operations)
             {
                 case '+':
-                    result = Substraction();
+                    result = Addition(2, 2);
                     break;
                 case '-':
                     result = number1db - number2db;
@@ -75,5 +75,6 @@ namespace calculator
                     break;
             }
             return result;
-        } 
+        }
+    }
 }
