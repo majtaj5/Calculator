@@ -8,22 +8,10 @@ namespace calculator
 {
     public class BaseCalculator
     {
-        protected static double Subtraction(double number1, double number2)
-        {
-            return number1 - number2;
-        }
-        public static double Addition(double number1, double number2)
-        {
-            return number1 + number2;
-        }
-        public double Division(double number1, double number2)
-        {
-            return Math.Round(number1 / number2, 2);
-        }
-        public double Multiplication(double number1, double number2)
-        {
-            return number1 * number2;
-        }
+        protected static double Subtraction(double number1, double number2) => number1 - number2;
+        protected static double Addition(double number1, double number2) => number1 + number2;
+        protected static double Division(double number1, double number2) => Math.Round(number1 / number2, 2);
+        protected static double Multiplication(double number1, double number2) => number1 * number2;
 
     }
 }

@@ -13,6 +13,14 @@ namespace calculator
             switch (choice)
             {
                 case ("0"):
+                    ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.Blue,
+              "Type the equation you want to calculate.\n" +
+              "You can add, subtract, multiply, divide two numbers.\n" +
+              "\n" +
+              "For example:\n" +
+              "2+2\n" +
+              "2*2\n"
+              );
                     Calculator.Calculate();
                     break;
                 case ("1"):

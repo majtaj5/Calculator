@@ -20,7 +20,5 @@ namespace calculator
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Gray;
         }
-
     }
-            
 }
