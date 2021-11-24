@@ -10,13 +10,12 @@ namespace calculator
     {
         public static void ShowMenuOptions()
         {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("What would you like to do?");
-            Console.WriteLine("0-simple calculator\n" +
+            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkGreen, 
+                ("What would you like to do?\n" +
+                "0-simple calculator\n" +
                 "1-advenced calculator\n" +
-                "2-workinig withthe text files\n" 
-                );
-            Console.ResetColor();
+                "2-workinig withthe text files\n"
+                ));
         }
     }
 }

@@ -9,7 +9,7 @@ namespace calculator
         {
             MainMenuOutPut.ShowMenuOptions();
             string choice = Console.ReadLine();
-            Console.Clear();
+
             switch (choice)
             {
                 case ("0"):
