@@ -16,5 +16,11 @@ namespace calculator
             }
             return sum == number ? true : false;
         }
+        public int FactorialNumber(int number)
+        {
+            int result = 1;
+            for (int i = 1; i <= number; i++) result *= i;
+            return result;
+        }
     }
 }
