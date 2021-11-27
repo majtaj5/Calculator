@@ -16,21 +16,17 @@ namespace calculator
             }
             return sum == number ? true : false;
         }
-        public bool PrimeNumber(int number)
+        public int PowerOfNumber(int number, int power)
         {
-            bool isPrime = true;
-            if (number <= 1) return false;
-            for (int i = 2; i <= number; i++)
-            {
-                if (number % i == 0)
-                {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime)
-                return true;
-            return isPrime;
+            int result = 1;
+            for (int i = 0; i < power; i++) result *= number;
+            return result;
+        }
+        public int FactorialNumber(int number)
+        {
+            int result = 1;
+            for (int i = 1; i <= number; i++) result *= i;
+            return result;
         }
     }
 }
