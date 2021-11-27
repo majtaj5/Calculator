@@ -28,5 +28,21 @@ namespace calculator
             for (int i = 1; i <= number; i++) result *= i;
             return result;
         }
+        public bool PrimeNumber(int number)
+        {
+            bool isPrime = true;
+            if (number <= 1) return false;
+            for (int i = 2; i <= number; i++)
+            {
+                if (number % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime)
+                return true;
+            return isPrime;
+        }
     }
 }
