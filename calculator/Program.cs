@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 
 namespace calculator
@@ -20,6 +21,15 @@ namespace calculator
                     break;
                 case ("2"):
                     Console.WriteLine("menu-working with text");
+                    Console.Write("\nWhat operation on the text file you want to perform: ");
+                    string selectFileOperation = Console.ReadLine();
+                    switch (selectFileOperation)
+                    {
+                        case "0":
+                            Console.Write("Enter the path of the file to read: ");
+                            Console.WriteLine(File.ReadAllText(@"D:\Visual Studio Programy\first-project-calculator\.gitignore"));
+                            break;
+                    }
                     break;
             }
         }
