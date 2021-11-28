@@ -50,5 +50,22 @@ namespace calculator
             for (int i = 0; i < numbers.Length; i++) result += numbers[i];
             return result / numbers.Length;
         }
+        public int[] MinMaxValuesOfArray(int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                for (int j = 0; j < numbers.Length - 1; j++)
+                {
+                    if (numbers[j] > numbers[j + 1])
+                    {
+                        int tempValue = numbers[j];
+                        numbers[j] = numbers[j + 1];
+                        numbers[j + 1] = tempValue;
+                    }
+                }
+            }
+            int[] minMaxValuesOfArray = new int[] { (numbers[0]), numbers[numbers.Length - 1] };
+            return minMaxValuesOfArray;
+        }
     }
 }
