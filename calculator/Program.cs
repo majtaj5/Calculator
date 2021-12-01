@@ -7,20 +7,27 @@ namespace calculator
     {
         static void Main(string[] args)
         {
-            MainMenuOutPut.ShowMenuOptions();
-            string choice = Console.ReadLine();
-            switch (choice)
+            bool appOn = true;
+            while (appOn)
             {
-                case ("0"):
-                    //operations.GetCalculationType();
-                    Console.WriteLine("menu-Calculator");
-                    break;
-                case ("1"):
-                    Console.WriteLine("menu-SimpleAlgoritms");
-                    break;
-                case ("2"):
-                    Console.WriteLine("menu-working with text");
-                    break;
+                MainMenuOutPut.ShowMenuOptions();
+                string choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case ("0"):
+                        //operations.GetCalculationType();
+                        Console.WriteLine("menu-Calculator");
+                        break;
+                    case ("1"):
+                        Console.WriteLine("menu-SimpleAlgoritms");
+                        break;
+                    case ("2"):
+                        Console.WriteLine("menu-working with text");
+                        break;
+                    case ("3"):
+                        appOn = false;
+                        break;
+                }
             }
         }
     }
