@@ -12,15 +12,8 @@ namespace calculator
         { 
             Console.ForegroundColor = color;
             Console.WriteLine(message);
-            resetConsole();
+            Console.ResetColor();
         }
-
-        private static void resetConsole()
-        {
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Gray;
-        }
-
     }
             
 }
