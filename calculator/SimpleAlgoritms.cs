@@ -50,7 +50,7 @@ namespace calculator
             for (int i = 0; i < numbers.Length; i++) result += numbers[i];
             return result / numbers.Length;
         }
-        public int[] MinMaxValuesOfArray(int[] numbers)
+        private int[] GetSortedArray(int[] numbers)
         {
             for (int i = 0; i < numbers.Length - 1; i++)
             {
@@ -64,8 +64,17 @@ namespace calculator
                     }
                 }
             }
-            int[] minMaxValuesOfArray = new int[] { (numbers[0]), numbers[numbers.Length - 1] };
-            return minMaxValuesOfArray;
+            return numbers;
+        }
+        public int GetMinOfArray(int[] numbers)
+        {
+            GetSortedArray(numbers);
+            return numbers[0];
+        }
+        public int GetMaxOfArray(int[] numbers)
+        {
+            GetSortedArray(numbers);
+            return numbers[numbers.Length - 1];
         }
     }
 }
