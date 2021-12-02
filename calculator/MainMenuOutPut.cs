@@ -14,7 +14,8 @@ namespace calculator
                 ("What would you like to do?\n" +
                 "0-simple calculator\n" +
                 "1-advenced calculator\n" +
-                "2-workinig withthe text files\n"
+                "2-workinig withthe text files\n" +
+                "3-EXIT app\n"
                 ));
         }
     }
