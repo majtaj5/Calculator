@@ -27,7 +27,8 @@ namespace calculator
                     {
                         case "0":
                             Console.Write("Enter the path of the file to read: ");
-                            Console.WriteLine(File.ReadAllText(@"D:\Visual Studio Programy\first-project-calculator\.gitignore"));
+                            string path = Console.ReadLine();
+                            Console.WriteLine(File.ReadAllText(path));
                             break;
                     }
                     break;
