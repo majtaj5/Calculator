@@ -25,19 +25,13 @@ namespace calculator
                     string selectFileOperation = Console.ReadLine();
                     switch (selectFileOperation)
                     {
-                     
-
-
-
                         case "1":
+                            WorkingWithFiles workingWithFiles = new WorkingWithFiles();
                             Console.Write("Enter the path of the file to read: ");
                             string pathOfFile = Console.ReadLine();
-                            File.ReadAllText(pathOfFile);
                             Console.Write("Which line would you like to read ? ");
                             int enterTheLineNumber = int.Parse(Console.ReadLine());
-                            string[] readingOfTextFile = File.ReadAllLines(@"D:\Visual Studio Programy\first-project-calculator\.gitignore");
-                            string readingLineOfTextFile = readingOfTextFile[enterTheLineNumber];
-                            Console.WriteLine(readingLineOfTextFile);
+                            Console.WriteLine(workingWithFiles.ReadOneLineOfTextFile(pathOfFile, enterTheLineNumber));
                             break;
                         default:
                             Console.WriteLine("You entered wrrong number.");
