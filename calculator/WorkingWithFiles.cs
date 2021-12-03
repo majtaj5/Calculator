@@ -9,7 +9,6 @@ namespace calculator
 {
     public class WorkingWithFiles
     {
-        private string ReadTextFile(string pathOfFile) => File.ReadAllText(pathOfFile);
         private string[] GetFileToArray(string pathOfFile) => File.ReadAllLines(pathOfFile);
         public string ReadOneLineOfTextFile(string pathOfFile, int numberOfLine)
         {
