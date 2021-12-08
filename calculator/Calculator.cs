@@ -5,7 +5,13 @@ namespace calculator
 {
     public class Calculator : BaseCalculator
     {
-        public static void Calculate()
+        private readonly CalculatorNumbers _calculatorNumbers;
+        public Calculator (CalculatorNumbers calculatorNumbers)
+        {
+            _calculatorNumbers = calculatorNumbers;
+        }
+
+        public void Calculate()
         {
 
             string usreInPut = Console.ReadLine();
@@ -15,7 +21,7 @@ namespace calculator
             char[] mathSymbols = { '+', '-', '*', '/', '\\' };
             int posChar = userInPutRemoveWhitespace.IndexOfAny(mathSymbols);
 
-            CalculatorNumbers b = GetNumberFromString.NumberFromString(posChar, userInPutRemoveWhitespace);
+            var b = NumberFromString(posChar, userInPutRemoveWhitespace);
 
             double number1db = double.Parse(b.number1);
             double number2db = double.Parse(b.number2);
@@ -27,7 +33,21 @@ namespace calculator
             ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
         }
 
-        private static double Count(double number1db, double number2db, char operations)
+        private CalculatorNumbers NumberFromString(int position, string userInput)
+        {
+            for (int i = 0; i < position; i++)
+            {
+                _calculatorNumbers.number1 = _calculatorNumbers.number1 + userInput[i];
+            }
+
+            for (int j = position + 1; j < userInput.Length; j++)
+            {
+                _calculatorNumbers.number2 = _calculatorNumbers.number2 + userInput[j];
+            }
+            return _calculatorNumbers;
+        }
+
+        private double Count(double number1db, double number2db, char operations)
         {
             double result = 0;
 
