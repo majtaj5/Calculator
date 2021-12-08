@@ -12,6 +12,13 @@ namespace calculator
             {
                 MainMenuOutPut.ShowMenuOptions();
                 string choice = Console.ReadLine();
+                
+                ConsoleKey cki;
+                Console.TreatControlCAsInput = true;
+                cki = Console.ReadKey();
+                KeyNavigation.PressedKey(cki);
+
+
                 switch (choice)
                 {
                     case ("0"):
