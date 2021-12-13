@@ -21,8 +21,7 @@ namespace calculator
               "2+2\n" +
               "2*2\n"
               );
-                    double n = Calculator.Calculate();
-                    ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {n}");
+                    Calculator.Calculate();
                     break;
                 case ("1"):
                     Console.WriteLine("menu-SimpleAlgoritms");
