@@ -5,7 +5,7 @@ namespace calculator
 {
     public class Calculator : BaseCalculator
     {
-        public static void Calculate()
+        public static double Calculate()
         {
             
             string usreInPut = Console.ReadLine();
@@ -35,10 +35,9 @@ namespace calculator
 
             double result = 0;
             result = Count(number1db, number2db, operations);
-            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
-
+            
+            return result;
         }
-
         private static double Count(double number1db, double number2db, char operations)
         {
             double result = 0;
