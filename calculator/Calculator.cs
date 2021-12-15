@@ -5,9 +5,15 @@ namespace calculator
 {
     public class Calculator : BaseCalculator
     {
-        public static double Calculate()
+        private readonly CalculatorNumbers _calculatorNumbers;
+        public Calculator (CalculatorNumbers calculatorNumbers)
         {
-            
+            _calculatorNumbers = calculatorNumbers;
+        }
+
+        public void Calculate()
+        {
+
             string usreInPut = Console.ReadLine();
 
             string userInPutRemoveWhitespace = usreInPut.Replace(" ", "");
@@ -15,30 +21,33 @@ namespace calculator
             char[] mathSymbols = { '+', '-', '*', '/', '\\' };
             int posChar = userInPutRemoveWhitespace.IndexOfAny(mathSymbols);
 
-            string number1 = "";
-            string number2 = "";
+            var b = NumberFromString(posChar, userInPutRemoveWhitespace);
 
-            for (int i = 0; i < posChar; i++)
-            {
-                number1 = number1 + userInPutRemoveWhitespace[i];
-            }
-
-            for (int j = posChar + 1; j < userInPutRemoveWhitespace.Length; j++)
-            {
-                number2 = number2 + userInPutRemoveWhitespace[j];
-            }
-
-            double number1db = double.Parse(number1);
-            double number2db = double.Parse(number2);
+            double number1db = double.Parse(b.number1);
+            double number2db = double.Parse(b.number2);
 
             char operations = userInPutRemoveWhitespace[posChar];
 
             double result = 0;
             result = Count(number1db, number2db, operations);
-            
-            return result;
+            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
         }
-        private static double Count(double number1db, double number2db, char operations)
+
+        private CalculatorNumbers NumberFromString(int position, string userInput)
+        {
+            for (int i = 0; i < position; i++)
+            {
+                _calculatorNumbers.number1 = _calculatorNumbers.number1 + userInput[i];
+            }
+
+            for (int j = position + 1; j < userInput.Length; j++)
+            {
+                _calculatorNumbers.number2 = _calculatorNumbers.number2 + userInput[j];
+            }
+            return _calculatorNumbers;
+        }
+
+        private double Count(double number1db, double number2db, char operations)
         {
             double result = 0;
 
