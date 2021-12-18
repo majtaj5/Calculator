@@ -15,5 +15,4 @@ namespace calculator
             Console.ResetColor();
         }
     }
-            
 }

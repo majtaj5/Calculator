@@ -1,24 +1,73 @@
 using System;
 
+
 namespace calculator
 {
-    public class Calculator
+    public class Calculator : BaseCalculator
     {
-        public int Subtraction(int number1, int number2)
+        private readonly CalculatorNumbers _calculatorNumbers;
+        public Calculator (CalculatorNumbers calculatorNumbers)
         {
-            return number1 - number2;
+            _calculatorNumbers = calculatorNumbers;
         }
-        public int Addition(int number1, int number2)
+
+        public void Calculate()
         {
-            return number1 + number2;
+
+            string usreInPut = Console.ReadLine();
+
+            string userInPutRemoveWhitespace = usreInPut.Replace(" ", "");
+
+            char[] mathSymbols = { '+', '-', '*', '/', '\\' };
+            int posChar = userInPutRemoveWhitespace.IndexOfAny(mathSymbols);
+
+            var b = NumberFromString(posChar, userInPutRemoveWhitespace);
+
+            double number1db = double.Parse(b.number1);
+            double number2db = double.Parse(b.number2);
+
+            char operations = userInPutRemoveWhitespace[posChar];
+
+            double result = 0;
+            result = Count(number1db, number2db, operations);
+            ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {result}");
         }
-        public double Division(double number1, double number2)
+
+        private CalculatorNumbers NumberFromString(int position, string userInput)
         {
-            return Math.Round(number1 / number2, 2);
+            for (int i = 0; i < position; i++)
+            {
+                _calculatorNumbers.number1 = _calculatorNumbers.number1 + userInput[i];
+            }
+
+            for (int j = position + 1; j < userInput.Length; j++)
+            {
+                _calculatorNumbers.number2 = _calculatorNumbers.number2 + userInput[j];
+            }
+            return _calculatorNumbers;
         }
-        public double Multiplication(double number1, double number2)
+
+        private double Count(double number1db, double number2db, char operations)
         {
-            return number1 * number2;
+            double result = 0;
+
+            switch (operations)
+            {
+                case '+':
+                    result = Addition(number1db, number2db);
+                    break;
+                case '-':
+                    result = Subtraction(number1db, number2db);
+                    break;
+                case '*':
+                    result = Multiplication(number1db, number2db);
+                    break;
+                case '/':
+                case '\\':
+                    result = Division(number1db, number2db);
+                    break;
+            }
+            return result;
         }
     }
 }

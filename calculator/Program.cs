@@ -15,8 +15,16 @@ namespace calculator
                 switch (choice)
                 {
                     case ("0"):
-                        //operations.GetCalculationType();
-                        Console.WriteLine("menu-Calculator");
+                        ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.Blue,
+                  "Type the equation you want to calculate.\n" +
+                  "You can add, subtract, multiply, divide two numbers.\n" +
+                  "\n" +
+                  "For example:\n" +
+                  "2+2\n" +
+                  "2*2\n"
+                  );
+                        double n = Calculator.Calculate();
+                        ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {n}");
                         break;
                     case ("1"):
                         Console.WriteLine("menu-SimpleAlgoritms");
