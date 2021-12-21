@@ -44,11 +44,37 @@ namespace calculator
                 return true;
             return isPrime;
         }
-        public int AverageOfTheNumbers(int[] numbers)
+        public double AverageOfTheNumbers(int[] numbers)
         {
-            int result = 0;
+            double result = 0;
             for (int i = 0; i < numbers.Length; i++) result += numbers[i];
-            return result / numbers.Length;
+            return Math.Round(result / numbers.Length, 2);
+        }
+        private int[] GetSortedArray(int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                for (int j = 0; j < numbers.Length - 1; j++)
+                {
+                    if (numbers[j] > numbers[j + 1])
+                    {
+                        int tempValue = numbers[j];
+                        numbers[j] = numbers[j + 1];
+                        numbers[j + 1] = tempValue;
+                    }
+                }
+            }
+            return numbers;
+        }
+        public int GetMinOfArray(int[] numbers)
+        {
+            GetSortedArray(numbers);
+            return numbers[0];
+        }
+        public int GetMaxOfArray(int[] numbers)
+        {
+            GetSortedArray(numbers);
+            return numbers[numbers.Length - 1];
         }
     }
 }
