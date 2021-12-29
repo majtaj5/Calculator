@@ -9,28 +9,32 @@ namespace calculator
 {
     public class SimpleAlgoritmsMenu
     {
+        
         public static void AlgorithmsChoise()
         {
+            SimpleAlgoritms simpleAlgoritms = new SimpleAlgoritms();
 
             string userInPut = Console.ReadLine();
 
             List<string> number = userInPut.SplitNumbers();
-            
-            int firstNumberInt = 0;
-            if (number.Count != 1 || !int.TryParse(number[0], out firstNumberInt))
-            {
-                Console.Clear();
-                Console.WriteLine("You need to enter only one integer ");
-                AlgorithmsChoise();
-            }
-            else
-            {
 
-                if (userInPut.ToLower().Contains("per"))
+
+            if (userInPut.ToLower().Contains("per"))
+                PerfectNumberMenu(simpleAlgoritms, number);
+            else if (userInPut.ToLower().Contains("pow"))
+                PowerOfNumberMenu(simpleAlgoritms, number);
+
+            static void PerfectNumberMenu(SimpleAlgoritms simpleAlgoritms, List<string> number)
+            {
+                int firstNumberInt = 0;
+                if (number.Count != 1 || !int.TryParse(number[0], out firstNumberInt))
                 {
 
-                    SimpleAlgoritms simpleAlgoritms = new SimpleAlgoritms();
-                    simpleAlgoritms.PerfectNumber(firstNumberInt);
+                    Console.WriteLine("You need to enter'per' and only one integer ");
+                    AlgorithmsChoise();
+                }
+                else
+                {
 
                     if (simpleAlgoritms.PerfectNumber(firstNumberInt))
                     {
@@ -41,13 +45,24 @@ namespace calculator
                         Console.WriteLine($"Number {firstNumberInt} isn't perfect number");
                     }
                 }
-                else if (userInPut.ToLower().Contains("pow"))
-                {
-                    Console.WriteLine("wop");
-                }
             }
 
+            static void PowerOfNumberMenu(SimpleAlgoritms simpleAlgoritms, List<string> number)
+            {
+                double firstNumberInt = 0;
+                int secondtNumberInt = 0;
+                if (number.Count != 2 || !double.TryParse(number[0], out firstNumberInt) || !int.TryParse(number[1], out secondtNumberInt))
+                {
+                    Console.WriteLine("You need to enter'pow' and one double and one integer");
+                    AlgorithmsChoise();
+                }
+                else
+                {
+                    Console.WriteLine($"Power of number {firstNumberInt}is {simpleAlgoritms.PowerOfNumber(firstNumberInt, secondtNumberInt)}"); ;
+                }
+            }
         }
 
     }
+
 }
