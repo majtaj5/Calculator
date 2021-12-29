@@ -23,8 +23,10 @@ namespace calculator
                   "2+2\n" +
                   "2*2\n"
                   );
-                        double n = Calculator.Calculate();
-                        ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.DarkCyan, $"Your result: {n}");
+                        CalculatorNumbers cal = new CalculatorNumbers();
+                        Calculator calculator = new Calculator(cal);
+                        calculator.Calculate();
+
                         break;
                     case ("1"):
                         Console.WriteLine("menu-SimpleAlgoritms");
