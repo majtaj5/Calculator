@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 
 namespace calculator
 {
-    public class GetNumbersFromString
+    public static class GetNumbersFromString
     {
-        public static List<string> SplitNumbers(string userInPut)
+        public static List<string> SplitNumbers(this string userInPut)
         {
             string _usreInPut = userInPut;
 
-            string usreInPutLower = _usreInPut.ToLower();
-
-           
+            
             List<string> numbersInput = new List<string>();
             Regex regex = new Regex(@"\d+(\.\d+)?");
-            var matches = regex.Matches(usreInPutLower);
+            var matches = regex.Matches(userInPut);
             foreach (Match match in matches)
             {
                 numbersInput.Add(match.Value);

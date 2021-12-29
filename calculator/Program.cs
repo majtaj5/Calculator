@@ -26,6 +26,7 @@ namespace calculator
                         CalculatorNumbers cal = new CalculatorNumbers();
                         Calculator calculator = new Calculator(cal);
                         calculator.Calculate();
+                        Console.ReadLine();
 
                         break;
                     case ("1"):
@@ -39,6 +40,7 @@ namespace calculator
                   "Get max of array\n"
                   );
                         SimpleAlgoritmsMenu.AlgorithmsChoise();
+                        Console.ReadLine();
                         break;
                     case ("2"):
                         Console.WriteLine("menu-working with text");

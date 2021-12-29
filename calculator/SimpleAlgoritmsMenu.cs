@@ -11,32 +11,43 @@ namespace calculator
     {
         public static void AlgorithmsChoise()
         {
-            string usreInPut = Console.ReadLine();
 
+            string userInPut = Console.ReadLine();
 
-            List<string> numbersInput2 =  GetNumbersFromString.SplitNumbers(usreInPut);
-
-           numbersInput2.ForEach(Console.WriteLine);
-            var mat2 = 2;
-            //if (usreInPutLower.Contains("per"))
+            List<string> number = userInPut.SplitNumbers();
+            
+            int firstNumberInt = 0;
+            if (number.Count != 1 || !int.TryParse(number[0], out firstNumberInt))
             {
-                
-                SimpleAlgoritms simpleAlgoritms = new SimpleAlgoritms();
-                simpleAlgoritms.PerfectNumber(mat2);
+                Console.Clear();
+                Console.WriteLine("You need to enter only one integer ");
+                AlgorithmsChoise();
+            }
+            else
+            {
 
-                if (simpleAlgoritms.PerfectNumber(mat2))
+                if (userInPut.ToLower().Contains("per"))
                 {
-                    Console.WriteLine("dupa");
+
+                    SimpleAlgoritms simpleAlgoritms = new SimpleAlgoritms();
+                    simpleAlgoritms.PerfectNumber(firstNumberInt);
+
+                    if (simpleAlgoritms.PerfectNumber(firstNumberInt))
+                    {
+                        Console.WriteLine($"Number {firstNumberInt} is perfect number");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Number {firstNumberInt} isn't perfect number");
+                    }
+                }
+                else if (userInPut.ToLower().Contains("pow"))
+                {
+                    Console.WriteLine("wop");
                 }
             }
-            //else if (usreInPutLower.Contains("pow"))
-            {
-                Console.WriteLine("wop");
-            }
+
         }
-        void Print(string s)
-        {
-            Console.WriteLine(s);
-        }
+
     }
 }
