@@ -29,7 +29,16 @@ namespace calculator
 
                         break;
                     case ("1"):
-                        Console.WriteLine("menu-SimpleAlgoritms");
+                        ChangeTheColorOfTheText.PrintColorMessage(ConsoleColor.Blue,
+                  "Perfect number- Type 'per' and number For example: per 6\n" +
+                  "Power of number- Type 'pow' and number For example: pre 6\n" +
+                  "Factorial number\n" +
+                  "Prime number\n" +
+                  "Average of the numbers\n" +
+                  "Get min of array\n"+
+                  "Get max of array\n"
+                  );
+                        SimpleAlgoritmsMenu.AlgorithmsChoise();
                         break;
                     case ("2"):
                         Console.WriteLine("menu-working with text");
