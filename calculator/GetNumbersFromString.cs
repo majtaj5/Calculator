@@ -11,9 +11,7 @@ namespace calculator
     {
         public static List<string> SplitNumbers(this string userInPut)
         {
-            string _usreInPut = userInPut;
-
-            
+           
             List<string> numbersInput = new List<string>();
             Regex regex = new Regex(@"\d+(\.\d+)?");
             var matches = regex.Matches(userInPut);

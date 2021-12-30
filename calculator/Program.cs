@@ -39,7 +39,10 @@ namespace calculator
                   "Get min of array\n"+
                   "Get max of array\n"
                   );
-                        SimpleAlgoritmsMenu.AlgorithmsChoise();
+                        SimpleAlgoritms alg = new SimpleAlgoritms();
+                        SimpleAlgoritmsMenu algMenu = new SimpleAlgoritmsMenu(alg);
+                        algMenu.AlgorithmsChoise();
+
                         Console.ReadLine();
                         break;
                     case ("2"):

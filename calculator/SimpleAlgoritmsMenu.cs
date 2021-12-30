@@ -9,26 +9,30 @@ namespace calculator
 {
     public class SimpleAlgoritmsMenu
     {
-        
-        public static void AlgorithmsChoise()
+        private List<string> number;
+        private readonly SimpleAlgoritms _simpleAlgorithms;
+        public SimpleAlgoritmsMenu(SimpleAlgoritms simpleAlgoritms)
         {
-            SimpleAlgoritms simpleAlgoritms = new SimpleAlgoritms();
-
+            _simpleAlgorithms = simpleAlgoritms;
+        }
+        public void AlgorithmsChoise()
+        {
+            
             string userInPut = Console.ReadLine();
 
-            List<string> number = userInPut.SplitNumbers();
+            number = userInPut.SplitNumbers();
            
             if (userInPut.ToLower().Contains("per"))
-                PerfectNumberMenu(simpleAlgoritms, number);
+                PerfectNumberMenu(_simpleAlgorithms);
             else if (userInPut.ToLower().Contains("pow"))
-                PowerOfNumberMenu(simpleAlgoritms, number);
+                PowerOfNumberMenu(_simpleAlgorithms);
             else if (userInPut.ToLower().Contains("fac"))
-                FactorialNumberMenu(simpleAlgoritms, number);
+                FactorialNumberMenu(_simpleAlgorithms);
             else if (userInPut.ToLower().Contains("fac"))
-                PrimeNumberMenu(simpleAlgoritms, number);
+                PrimeNumberMenu(_simpleAlgorithms);
         }
 
-        private static void PerfectNumberMenu(SimpleAlgoritms simpleAlgoritms, List<string> number)
+        private void PerfectNumberMenu(SimpleAlgoritms simpleAlgoritms)
         {
             int firstNumberInt = 0;
             if (number.Count != 1 || !int.TryParse(number[0], out firstNumberInt))
@@ -51,7 +55,7 @@ namespace calculator
             }
         }
 
-        private static void PowerOfNumberMenu(SimpleAlgoritms simpleAlgoritms, List<string> number)
+        private void PowerOfNumberMenu(SimpleAlgoritms simpleAlgoritms)
         {
             double firstNumberInt = 0;
             int secondtNumberInt = 0;
@@ -67,7 +71,7 @@ namespace calculator
 
         }
 
-        private static void FactorialNumberMenu(SimpleAlgoritms simpleAlgoritms, List<string> number)
+        private void FactorialNumberMenu(SimpleAlgoritms simpleAlgoritms)
         {
             int firstNumberInt = 0;
             if (number.Count != 1 || !int.TryParse(number[0], out firstNumberInt))
@@ -81,7 +85,7 @@ namespace calculator
             }
         }
 
-        private static void PrimeNumberMenu(SimpleAlgoritms simpleAlgoritms, List<string> number)
+        private void PrimeNumberMenu(SimpleAlgoritms simpleAlgoritms)
         {
             int firstNumberInt = 0;
             if (number.Count != 1 || !int.TryParse(number[0], out firstNumberInt))
