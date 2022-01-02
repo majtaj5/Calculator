@@ -13,7 +13,7 @@ namespace calculator
         {
            
             List<string> numbersInput = new List<string>();
-            Regex regex = new Regex(@"\d+(\.\d+)?");
+            Regex regex = new Regex(@"\d+(\,\d+)?");
             var matches = regex.Matches(userInPut);
             foreach (Match match in matches)
             {

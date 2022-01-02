@@ -48,14 +48,14 @@ namespace calculator
             return isPrime;
         }
 
-        public double AverageOfTheNumbers(int[] numbers)
+        public double AverageOfTheNumbers(double[] numbers)
         {
             double result = 0;
             for (int i = 0; i < numbers.Length; i++) result += numbers[i];
             return Math.Round(result / numbers.Length, 2);
         }
 
-        private int[] GetSortedArray(int[] numbers)
+        private double[] GetSortedArray(double[] numbers)
         {
             for (int i = 0; i < numbers.Length - 1; i++)
             {
@@ -63,7 +63,7 @@ namespace calculator
                 {
                     if (numbers[j] > numbers[j + 1])
                     {
-                        int tempValue = numbers[j];
+                        double tempValue = numbers[j];
                         numbers[j] = numbers[j + 1];
                         numbers[j + 1] = tempValue;
                     }
@@ -72,13 +72,13 @@ namespace calculator
             return numbers;
         }
 
-        public int GetMinOfArray(int[] numbers)
+        public double GetMinOfArray(double[] numbers)
         {
             GetSortedArray(numbers);
             return numbers[0];
         }
 
-        public int GetMaxOfArray(int[] numbers)
+        public double GetMaxOfArray(double[] numbers)
         {
             GetSortedArray(numbers);
             return numbers[numbers.Length - 1];
